@@ -4,14 +4,18 @@ Scripts to automate tools.
 from fabric.api import local
 
 
-def bootstrap():
-    """Initialize a new project."""
-
+def install():
     # Setup virtualenv
     local("virtualenv venv --distribute")
 
     # Source virtualenv
     local("source venv/bin/activate && pip install -r requirements.txt")
+
+
+def bootstrap():
+    """Initialize a new project."""
+
+    install()
 
     # Create the Procfile
     local("echo 'web: python app.py' > Procfile")
