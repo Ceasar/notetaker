@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- Le styles -->
+        <link href="./bootstrap.css" rel="stylesheet">
+        {% block stylesheets %}
+        <link href="./screen.css" rel="stylesheet" media="screen">
+        <link href="./print.css" rel="stylesheet" media="print">
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        {% endblock %}
+        {% block js %}
+        {% endblock %}
+    </body>
+</html>
