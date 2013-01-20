@@ -1,4 +1,4 @@
-#!/Users/ceasarbautista/Projects/notetaker/venv/bin/python
+#!/Users/elissawolf/Documents/hackathons/notetaker/notetaker/venv/bin/python
 # EASY-INSTALL-ENTRY-SCRIPT: 'distribute==0.6.28','console_scripts','easy_install'
 __requires__ = 'distribute==0.6.28'
 import sys

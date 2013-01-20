@@ -7,12 +7,12 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/Users/ceasarbautista/Projects/notetaker/venv"
+setenv VIRTUAL_ENV "/Users/elissawolf/Documents/hackathons/notetaker/notetaker/venv"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"
 
-set _OLD_VIRTUAL_PROMPT="$prompt"
+
 
 if ("" != "") then
     set env_name = ""
@@ -25,7 +25,15 @@ else
         set env_name = `basename "$VIRTUAL_ENV"`
     endif
 endif
-set prompt = "[$env_name] $prompt"
+
+# Could be in a non-interactive environment,
+# in which case, $prompt is undefined and we wouldn't
+# care about the prompt anyway.
+if ( $?prompt ) then
+    set _OLD_VIRTUAL_PROMPT="$prompt"
+    set prompt = "[$env_name] $prompt"
+endif
+
 unset env_name
 
 alias pydoc python -m pydoc
